@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GridViewTutorial</string>
+    <string-array name="country_name">
+        <item>afghanistan_flag</item>
+        <item>brazil_flag</item>
+        <item>Croatia_flag</item>
+        <item>England_flag</item>
+        <item>france_flag</item>
+        <item>Germany_flag</item>
+        <item>Guinea_flag</item>
+        <item>iran_flag</item>
+        <item>japan_flag</item>
+        <item>nigeria_flag</item>
+    </string-array>
+</resources>
