@@ -29,7 +29,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent=new Intent(this,MyDialog.class);
+        Intent intent = new Intent(this, MyDialog.class);
+        ViewHolder holder= (ViewHolder) view.getTag();
+        Country temp= (Country) holder.MyCountryimage.getTag();
+
+        intent.putExtra("countryImage",temp.imageId);
+        intent.putExtra("countryName",temp.countryName);
         startActivity(intent);
     }
 }
@@ -90,8 +95,9 @@ class MasoudAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) row.getTag();
         }
-        holder.MyCountry.setImageResource(list.get(position).imageId);
-
+        Country temp = list.get(position);
+        holder.MyCountryimage.setImageResource(temp.imageId);
+        holder.MyCountryimage.setTag(temp);
         return row;
     }
 
@@ -99,10 +105,10 @@ class MasoudAdapter extends BaseAdapter {
 
 class ViewHolder {
 
-    ImageView MyCountry;
+    ImageView MyCountryimage;
 
     ViewHolder(View v) {
-        MyCountry = (ImageView) v.findViewById(R.id.imageView);
+        MyCountryimage = (ImageView) v.findViewById(R.id.imageView);
 
     }
 }
