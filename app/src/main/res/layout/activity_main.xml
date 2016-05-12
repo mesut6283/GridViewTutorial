@@ -20,5 +20,5 @@
         android:verticalSpacing="10dp"
         android:columnWidth="120dp"
 
-        android:stretchMode="spacingWidthUniform"/>
+        android:stretchMode="spacingWidthUniform" />
 </RelativeLayout>
